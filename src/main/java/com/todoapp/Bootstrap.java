@@ -24,7 +24,7 @@ public class Bootstrap {
         String host = System.getenv("OPENSHIFT_MONGODB_DB_HOST");
         if (host == null) {
             MongoClient mongoClient = new MongoClient("localhost");
-            return mongoClient.getDB("todoapp");
+            return mongoClient.getDB("todo");
         }
         int port = Integer.parseInt(System.getenv("OPENSHIFT_MONGODB_DB_PORT"));
         String dbname = System.getenv("OPENSHIFT_APP_NAME");
